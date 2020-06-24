@@ -10,6 +10,6 @@ public class Program
 	{
 		Console.WriteLine("Please enter how many products you need for SKUID A");
 		int A_Quant = Convert.ToInt32(Console.ReadLine());
-		Console.WriteLine(SKUID_PRICE_A*A_Quant);
+		Console.WriteLine(SKUID_PRICE_A*A_Quant); 
 	}
 }
