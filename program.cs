@@ -53,7 +53,14 @@ public class Program
 			int a= (B_Quant/2)*45;
 			int b=SKUID_PRICE_B*(B_Quant%2);
 			int c= a+b;
-			IS_PROMOTION_2=(B_Quant/2)>0?true:false;
+			if(IS_PROMOTION_1==true)
+			{
+				IS_PROMOTION_2=false;
+			}
+			else
+			{
+				IS_PROMOTION_2=(B_Quant/2)>0?true:false;				
+			}
 			Total_B=IS_PROMOTION_2==false?(SKUID_PRICE_B * B_Quant):((B_Quant/2)*45 + SKUID_PRICE_B*(B_Quant%2));
 			if(!IS_PROMOTION_2)
 			{
@@ -64,7 +71,7 @@ public class Program
 				Console.WriteLine(B_Quant + " * B " + c);
 			}
 		}
-		if(C_Quant==1 && D_Quant==1)
+		if(C_Quant==1 && D_Quant==1 && IS_PROMOTION_1==false && IS_PROMOTION_2==false)
 		{
 			Total_C=15;
 			Total_D=15;
