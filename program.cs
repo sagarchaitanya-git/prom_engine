@@ -64,15 +64,24 @@ public class Program
 				Console.WriteLine(B_Quant + " * B " + c);
 			}
 		}
-		if(C_Quant!=0)
+		if(C_Quant==1 && D_Quant==1)
 		{
-			Total_C=SKUID_PRICE_C * C_Quant;
-			Console.WriteLine(C_Quant + " * C " + Total_C);
+			Total_C=15;
+			Total_D=15;
+			Console.WriteLine("C + D " + 30);
 		}
-		if(D_Quant!=0)
+		else
 		{
-			Total_D=SKUID_PRICE_D * D_Quant;
-			Console.WriteLine(D_Quant + " * D " + Total_D);
+			if(C_Quant!=0)
+			{
+				Total_C=SKUID_PRICE_C * C_Quant;
+				Console.WriteLine(C_Quant + " * C " + Total_C);
+			}
+			if(D_Quant!=0)
+			{
+				Total_D=SKUID_PRICE_D * D_Quant;
+				Console.WriteLine(D_Quant + " * D " + Total_D);
+			}
 		}
 		Total=Total_A+Total_B+Total_C+Total_D;
 		if(Total!=0){
